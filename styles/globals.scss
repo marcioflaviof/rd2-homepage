@@ -1,0 +1,63 @@
+@use "colors";
+
+@font-face {
+  font-family: Univers Condensed;
+  src: url(/fonts/Univers_Condensed.woff);
+}
+
+@font-face {
+  font-family: Redemption;
+  src: url(/fonts/Redemption.woff);
+}
+
+:root {
+  scroll-behavior: smooth;
+  color: colors.$white;
+  background-color: colors.$black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Univers Condensed, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sr-only {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
