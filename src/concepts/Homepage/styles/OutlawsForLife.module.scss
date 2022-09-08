@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  background-image: url(/homepage/outlaws_container.jpg);
+  margin-bottom: -4.375rem;
+  justify-content: center;
+  height: 25rem;
+}
+
+.outlaws_top {
+  width: 100%;
+  background: url(/homepage/outlaws_top.png);
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.outlaws_for_life {
+  font-family: Redemption;
+  max-width: 18.375rem;
+  width: 70%;
+  margin-top: -45px;
+  font-size: 5.3rem;
+  line-height: 0.85;
+  text-align: center;
+}

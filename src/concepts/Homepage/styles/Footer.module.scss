@@ -1,0 +1,170 @@
+@use "src/styles/colors";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-image: url(/mobile/homepage/footer_mobile.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 15px 20px;
+  align-items: flex-end;
+  justify-content: center;
+  color: colors.$white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.parental_rating_container {
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.parental_rating {
+  width: 177px;
+  display: inline-block;
+  background-image: url(/homepage/parental_rating.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+}
+
+.announcements_container {
+  order: -1;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.date {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0 auto 5px;
+  width: max-content;
+  font-family: Redemption;
+  word-spacing: -0.07em;
+}
+
+.follow_subscribe {
+  font-size: 0.83rem;
+  margin-bottom: 1.25rem;
+}
+
+.mailing_list {
+  font-family: Redemption;
+  word-spacing: -0.07em;
+  line-height: 1;
+  background-image: url(/mobile/homepage/link_bottom.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: colors.$black;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.social_links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto 1.25rem;
+  max-width: 18.75rem;
+}
+
+.facebook {
+  background-image: url(/icons/facebook.svg);
+  width: 1.875rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}
+.twitter {
+  background-image: url(/icons/twitter.svg);
+  width: 1.875rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}
+.instagram {
+  background-image: url(/icons/instagram.svg);
+  width: 1.875rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}
+.youtube {
+  background-image: url(/icons/youtube.svg);
+  width: 1.875rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}
+.twitch {
+  background-image: url(/icons/twitch.svg);
+  width: 1.875rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}
+
+.rockstar_container {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.rockstar_symbol {
+  display: inline-block;
+  background-image: url(/icons/rockstar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  width: 4.9375rem;
+  &::before {
+    content: "";
+    padding-top: 91.6%;
+    display: block;
+  }
+}

@@ -1,0 +1,23 @@
+.background_image {
+  background-image: url(/mobile/homepage/main_banner.jpg);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
+  padding-top: 2.5rem;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 138.53%;
+  }
+}
+.summary_section {
+  padding: 2.3rem 3.125rem;
+}
+
+.summary {
+  font-size: 21px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  line-height: 1.15;
+}
