@@ -1,5 +1,28 @@
 import styles from "./styles/Footer.module.scss";
 
+const socialMedias = [
+  {
+    ref: "https://www.facebook.com/rockstargames",
+    image: "icons/facebook.svg",
+  },
+  {
+    ref: "https://twitter.com/rockstargames",
+    image: "icons/twitter.svg",
+  },
+  {
+    ref: "https://instagram.com/rockstargames",
+    image: "icons/instagram.svg",
+  },
+  {
+    ref: "http://youtube.com/rockstargames",
+    image: "icons/youtube.svg",
+  },
+  {
+    ref: "https://twitch.tv/rockstargames",
+    image: "icons/twitch.svg",
+  },
+];
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -10,41 +33,15 @@ const Footer = () => {
         </span>
         <button className={styles.mailing_list}>Rockstar Mailing List</button>
         <div className={styles.social_links}>
-          <a
-            className={styles.icon_link}
-            target="_blank"
-            href="https://www.facebook.com/rockstargames"
-          >
-            <img src="icons/facebook.svg" className={styles.wtf} />
-          </a>
-          <a
-            className={styles.icon_link}
-            target="_blank"
-            href="https://twitter.com/rockstargames"
-          >
-            <img src="icons/twitter.svg" />
-          </a>
-          <a
-            className={styles.icon_link}
-            target="_blank"
-            href="https://instagram.com/rockstargames"
-          >
-            <img src="icons/instagram.svg" />
-          </a>
-          <a
-            className={styles.icon_link}
-            target="_blank"
-            href="http://youtube.com/rockstargames"
-          >
-            <img src="icons/youtube.svg" />
-          </a>
-          <a
-            className={styles.icon_link}
-            target="_blank"
-            href="https://twitch.tv/rockstargames"
-          >
-            <img src="icons/twitch.svg" />
-          </a>
+          {socialMedias.map(({ ref, image }) => (
+            <a
+              className={`${styles.icon_link} ${styles.hover_link}`}
+              target="_blank"
+              href={ref}
+            >
+              <img src={image} />
+            </a>
+          ))}
         </div>
       </div>
 

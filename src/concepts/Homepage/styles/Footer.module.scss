@@ -90,8 +90,10 @@
 .icon_link {
   position: relative;
   width: 1.875rem;
-  &:hover {
-    opacity: 1 !important;
+  &.hover_link {
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
