@@ -3,46 +3,61 @@ import styles from "./styles/Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.parental_rating_container}>
-        <a className={styles.parental_rating} />
-      </div>
-
       <div className={styles.announcements_container}>
         <div className={styles.date}>Out now</div>
-        <div className={styles.follow_subscribe}>
+        <span className={styles.follow_subscribe}>
           For all announcements, follow/subscribe:
-        </div>
-        <a className={styles.mailing_list}>Rockstar Mailing List</a>
+        </span>
+        <button className={styles.mailing_list}>Rockstar Mailing List</button>
         <div className={styles.social_links}>
           <a
-            className={styles.facebook}
+            className={styles.icon_link}
             target="_blank"
             href="https://www.facebook.com/rockstargames"
-          />
+          >
+            <img src="icons/facebook.svg" className={styles.wtf} />
+          </a>
           <a
-            className={styles.twitter}
+            className={styles.icon_link}
             target="_blank"
             href="https://twitter.com/rockstargames"
-          />
+          >
+            <img src="icons/twitter.svg" />
+          </a>
           <a
-            className={styles.instagram}
+            className={styles.icon_link}
             target="_blank"
             href="https://instagram.com/rockstargames"
-          />
+          >
+            <img src="icons/instagram.svg" />
+          </a>
           <a
-            className={styles.youtube}
+            className={styles.icon_link}
             target="_blank"
             href="http://youtube.com/rockstargames"
-          />
+          >
+            <img src="icons/youtube.svg" />
+          </a>
           <a
-            className={styles.twitch}
+            className={styles.icon_link}
             target="_blank"
             href="https://twitch.tv/rockstargames"
-          />
+          >
+            <img src="icons/twitch.svg" />
+          </a>
         </div>
       </div>
+
+      <div className={styles.parental_rating_container}>
+        <a className={styles.parental_rating}>
+          <img src="homepage/parental_rating.svg" />
+        </a>
+      </div>
+
       <div className={styles.rockstar_container}>
-        <a target="_blank" className={styles.rockstar_symbol} />
+        <a target="_blank" className={styles.rockstar_symbol}>
+          <img src="icons/rockstar.svg" />
+        </a>
       </div>
     </footer>
   );

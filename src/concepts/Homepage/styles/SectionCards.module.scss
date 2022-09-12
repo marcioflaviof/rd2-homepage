@@ -1,17 +1,4 @@
-@use "src/styles/colors";
-
 .container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.title {
-  font-family: Redemption, sans-serif;
-  word-spacing: -0.07em;
-  color: inherit;
-  line-height: 1;
-  padding: 0.625rem;
-  font-size: 2rem;
 }
