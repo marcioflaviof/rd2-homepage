@@ -53,7 +53,7 @@ const SectionCards = () => {
   return (
     <div className={styles.container}>
       {sections.map(({ name, path, mask }) => (
-        <Card name={name} mask={mask} image={path} />
+        <Card name={name} key={name} mask={mask} image={path} />
       ))}
     </div>
   );

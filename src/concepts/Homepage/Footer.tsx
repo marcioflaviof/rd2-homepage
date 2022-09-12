@@ -35,6 +35,7 @@ const Footer = () => {
         <div className={styles.social_links}>
           {socialMedias.map(({ ref, image }) => (
             <a
+              key={ref}
               className={`${styles.icon_link} ${styles.hover_link}`}
               target="_blank"
               href={ref}
