@@ -1,16 +1,121 @@
+@use "src/styles/medias";
 @use "src/styles/colors";
 
-.navbar {
-  display: flex;
+.container {
   position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  background: colors.$black;
-  max-height: 2.5rem;
-  width: 100%;
+  width: 23.5rem;
+  height: 100vh;
+  top: 2.5rem;
+  z-index: 6;
+  font-family: Redemption;
+  font-size: 1.27rem;
+  word-spacing: -0.07rem;
 }
 
-.hamburguer_menu {
-  padding: 0.75rem;
-  margin-top: 2px;
+.bullets_container {
+  padding: 0.5rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.background_img {
+  position: absolute;
+  background-image: url(/mobile/homepage/nav_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bullet_with_sub,
+.bullets {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.bullets {
+  color: colors.$white;
+  transition: 0.2s ease;
+  img {
+    display: none;
+  }
+  &:hover {
+    color: colors.$red-100;
+    img {
+      display: inline;
+    }
+  }
+}
+
+.bullet_with_sub {
+  margin-left: 1.775rem;
+}
+
+.selected {
+  color: colors.$red-100;
+  img {
+    display: inline;
+  }
+}
+
+.svg_container {
+  margin-right: 0.65rem;
+  margin-top: -0.77rem;
+  height: 18px;
+  width: 18px;
+}
+
+.so_container {
+  margin-left: 1.75rem;
+}
+
+.divider {
+  margin-top: 1.5rem;
+  padding-left: 2rem;
+  max-width: 100%;
+}
+
+.terms {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  font-family: Univers Condensed;
+  font-size: 1rem;
+  color: colors.$gray-100;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  a {
+    padding: 0.5rem;
+    &:hover {
+      color: colors.$white;
+    }
+  }
+}
+
+@media (min-width: medias.$desktop-M) {
+  .container {
+    width: 28.25rem;
+    font-size: 1.85rem;
+  }
+
+  .svg_container {
+    margin-top: -0.8rem;
+  }
+  .bullets,
+  .bullet_with_sub {
+    padding-top: 1rem;
+    margin-bottom: 0.7rem;
+    height: 1.875rem;
+  }
 }
