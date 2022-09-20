@@ -51,11 +51,11 @@ const sections = [
 
 const SectionCards = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       {sections.map(({ name, path, mask }) => (
         <Card name={name} key={name} mask={mask} image={path} />
       ))}
-    </div>
+    </section>
   );
 };
 

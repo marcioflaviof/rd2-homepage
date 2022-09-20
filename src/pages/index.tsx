@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <div className={styles.summary_container}>
+        <section className={styles.summary_container}>
           <p className={styles.summary}>
             America, 1899. The end of the Wild West era has begun. After a
             robbery goes badly wrong in the western town of Blackwater, Arthur
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             a choice between his own ideals and loyalty to the gang who raised
             him.
           </p>
-        </div>
+        </section>
         <SectionCards />
         <OutlawsForLife />
         <Footer />
