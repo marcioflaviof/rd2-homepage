@@ -42,12 +42,14 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
       <nav className={styles.container}>
         <div className={styles.background_img} />
         <div className={styles.bullets_container}>
-          {navOptions.map((no) => {
-            const justRender = no.subOptions ? (
+          {navOptions.map((navOption) => {
+            const justRender = navOption.subOptions ? (
               <div>
-                <span className={styles.bullet_with_sub}>{no.option}</span>
-                {no.subOptions.map((so) => (
-                  <div className={styles.so_container} key={so}>
+                <span className={styles.bullet_with_sub}>
+                  {navOption.option}
+                </span>
+                {navOption.subOptions.map((subOption) => (
+                  <div className={styles.so_container} key={subOption}>
                     <a className={styles.bullets}>
                       <div className={styles.svg_container}>
                         <picture>
@@ -57,7 +59,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
                           />
                         </picture>
                       </div>
-                      {so}
+                      {subOption}
                     </a>
                   </div>
                 ))}
@@ -65,7 +67,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
             ) : (
               <a
                 className={`${styles.bullets} ${
-                  no.selected && styles.selected
+                  navOption.selected && styles.selected
                 }`}
               >
                 <div className={styles.svg_container}>
@@ -76,7 +78,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
                     />
                   </picture>
                 </div>
-                {no.option}
+                {navOption.option}
               </a>
             );
 
