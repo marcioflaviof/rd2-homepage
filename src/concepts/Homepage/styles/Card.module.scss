@@ -11,11 +11,16 @@
   transition: color 0.2s ease;
   &:hover {
     color: colors.$red-100;
+    .image {
+      transform: scale(1.05);
+      filter: sepia(25%);
+    }
   }
 }
 
 .image {
   z-index: 0;
+  transition: transform 0.3s ease;
 }
 
 .image_container {

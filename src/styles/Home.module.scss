@@ -1,9 +1,13 @@
 @use "src/styles/medias";
 
-.bg_image_container {
+.bg_image_container_mobile {
   padding-top: 2.5rem;
   position: relative;
   z-index: -10;
+}
+
+.bg_image_container_desktop {
+  display: none;
 }
 
 .summary {
@@ -26,6 +30,18 @@
     background-size: cover;
     background-origin: content-box;
   }
+
+  .bg_image_container_mobile {
+    display: none;
+  }
+
+  .bg_image_container_desktop {
+    display: block;
+    padding-top: 2.5rem;
+    position: relative;
+    z-index: -10;
+  }
+
   .summary {
     padding: 1.25rem 0 1.875rem 0;
     font-size: 18px;

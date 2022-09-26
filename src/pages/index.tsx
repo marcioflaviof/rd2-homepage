@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
@@ -9,20 +9,9 @@ import { Footer } from "src/concepts/Homepage/Footer";
 import { OutlawsForLife } from "src/concepts/Homepage/OutlawsForLife";
 import { SectionCards } from "src/concepts/Homepage/SectionsCards";
 import { Navbar } from "src/components/molecules/Navbar/Navbar";
-import { useMediaQuery } from "src/hooks/useMediaQuery";
 
 const Home: NextPage = () => {
   const [showNav, setShowNav] = useState(false);
-  const [bannerImg, setBannerImg] = useState("");
-  const [bannerHeight, setBannerHeight] = useState("");
-  const desktop = useMediaQuery(768);
-
-  useEffect(() => {
-    setBannerImg(
-      desktop ? "/homepage/main_banner.jpg" : "/mobile/homepage/main_banner.jpg"
-    );
-    setBannerHeight(desktop ? "42" : "138.53");
-  }, [desktop]);
 
   return (
     <div>
@@ -34,13 +23,23 @@ const Home: NextPage = () => {
       <main>
         <Header setShowNavbar={setShowNav} />
         <Navbar setShowNavbar={setShowNav} show={showNav} />
-        <div className={styles.bg_image_container}>
+        <div className={styles.bg_image_container_desktop}>
           <Image
             alt="banner image"
-            src={bannerImg}
+            src="/homepage/main_banner.jpg"
             layout="responsive"
             width="100"
-            height={bannerHeight}
+            height="42"
+          />
+        </div>
+
+        <div className={styles.bg_image_container_mobile}>
+          <Image
+            alt="banner image"
+            src="/mobile/homepage/main_banner.jpg"
+            layout="responsive"
+            width="100"
+            height="138.53"
           />
         </div>
 
