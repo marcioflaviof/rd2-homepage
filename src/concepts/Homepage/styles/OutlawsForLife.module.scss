@@ -1,0 +1,40 @@
+@use "src/styles/medias";
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  background-image: url(/homepage/outlaws_container.jpg);
+  margin-bottom: -4.375rem;
+  justify-content: center;
+  height: 25rem;
+}
+
+.outlaws_top {
+  flex-basis: 100%;
+  background: url(/homepage/outlaws_top.png);
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.outlaws_for_life {
+  font-family: Redemption;
+  max-width: 18.375rem;
+  flex-basis: 70%;
+  margin-top: -45px;
+  font-size: 5.3rem;
+  line-height: 0.85;
+  text-align: center;
+}
+
+@media (min-width: medias.$desktop) {
+  .container {
+    height: 19.375rem;
+  }
+
+  .outlaws_for_life {
+    flex-basis: 95%;
+    max-width: none;
+    font-size: 6.37rem;
+  }
+}

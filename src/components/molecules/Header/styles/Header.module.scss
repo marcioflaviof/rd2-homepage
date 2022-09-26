@@ -1,0 +1,47 @@
+@use "src/styles/medias";
+@use "src/styles/colors";
+
+.header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background: colors.$black;
+  max-height: 2.5rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.hamburguer_menu {
+  background: none;
+  padding: 0.75rem;
+  margin-top: 2px;
+}
+
+.title {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: medias.$desktop) {
+  .hamburguer_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 0.9rem;
+    color: colors.$white;
+    transition: color 0.2s ease;
+    &:hover {
+      color: colors.$red-100;
+    }
+  }
+
+  .title {
+    display: block;
+    visibility: visible;
+    font-family: Redemption;
+    font-size: 1.5rem;
+    word-spacing: -0.07rem;
+    margin-left: 0.7rem;
+  }
+}

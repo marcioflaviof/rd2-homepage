@@ -1,0 +1,136 @@
+@use "src/styles/medias";
+@use "src/styles/colors";
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  background-image: url(/mobile/homepage/footer_mobile.png);
+  background-position: top;
+  background-size: cover;
+  padding: 50px 15px 20px;
+  color: colors.$white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.parental_rating_container {
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.parental_rating {
+  width: 177px;
+  display: inline-block;
+}
+
+.announcements_container {
+  order: -1;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.date {
+  font-size: 2.5em;
+  line-height: 1;
+  margin: 0 auto 5px;
+  font-family: Redemption;
+  word-spacing: -0.07em;
+}
+
+.follow_subscribe {
+  display: block;
+  font-size: 0.83em;
+  margin-bottom: 1.25rem;
+}
+
+.mailing_list {
+  font-family: Redemption;
+  font-size: 1em;
+  word-spacing: -0.07em;
+  line-height: 1;
+  background-image: url(/mobile/homepage/link_bottom.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: colors.$black;
+  background-color: colors.$black;
+  padding: 0.65rem 1.25rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.social_links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 1.25rem;
+  max-width: 18.75rem;
+  &:hover {
+    a {
+      transition: 0.2s ease;
+      opacity: 0.8;
+    }
+  }
+}
+
+.icon_link {
+  position: relative;
+  width: 1.875rem;
+  &.hover_link {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.rockstar_container {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.rockstar_symbol {
+  display: inline-block;
+  width: 4.9375rem;
+}
+
+@media (min-width: medias.$desktop-M) {
+  .footer {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 18px;
+  }
+
+  .announcements_container {
+    order: 1;
+    text-align: center;
+    flex-basis: 100%;
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .parental_rating_container {
+    margin: 0;
+    text-align: left;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+
+  .rockstar_container {
+    order: 2;
+    flex-basis: 25%;
+    text-align: right;
+    max-width: 25%;
+  }
+}

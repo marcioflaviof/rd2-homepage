@@ -1,0 +1,51 @@
+@use "src/styles/medias";
+
+.bg_image_container_mobile {
+  padding-top: 2.5rem;
+  position: relative;
+  z-index: -10;
+}
+
+.bg_image_container_desktop {
+  display: none;
+}
+
+.summary {
+  padding: 2.3rem 3.125rem;
+  background-image: url(/homepage/text_bg.jpg);
+  background-size: cover;
+  background-origin: content-box;
+  max-width: 100%;
+  font-size: 1.3125rem;
+  text-align: center;
+  line-height: 1.15;
+}
+
+@media (min-width: medias.$desktop) {
+  .summary_container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-image: url(/homepage/text_bg.jpg);
+    background-size: cover;
+    background-origin: content-box;
+  }
+
+  .bg_image_container_mobile {
+    display: none;
+  }
+
+  .bg_image_container_desktop {
+    display: block;
+    padding-top: 2.5rem;
+    position: relative;
+    z-index: -10;
+  }
+
+  .summary {
+    padding: 1.25rem 0 1.875rem 0;
+    font-size: 18px;
+    max-width: 665px;
+    background-image: none;
+  }
+}
