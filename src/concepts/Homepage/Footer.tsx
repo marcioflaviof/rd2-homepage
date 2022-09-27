@@ -47,7 +47,7 @@ const Footer = () => {
               href={ref}
             >
               <picture>
-                <img src={image} alt={name} />
+                <img src={image} alt={name} width="30px" height="35px" />
               </picture>
             </a>
           ))}
@@ -62,7 +62,12 @@ const Footer = () => {
           rel="noreferrer"
         >
           <picture>
-            <img alt="parental rating" src="homepage/parental_rating.svg" />
+            <img
+              alt="parental rating"
+              src="homepage/parental_rating.svg"
+              width="177px"
+              height="94px"
+            />
           </picture>
         </a>
       </div>
@@ -75,7 +80,12 @@ const Footer = () => {
           rel="noreferrer"
         >
           <picture>
-            <img src="icons/rockstar.svg" alt="rockstar icon" />
+            <img
+              src="icons/rockstar.svg"
+              alt="rockstar icon"
+              width="79px"
+              height="73px"
+            />
           </picture>
         </a>
       </div>
