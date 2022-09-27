@@ -55,7 +55,12 @@ const Footer = () => {
       </div>
 
       <div className={styles.parental_rating_container}>
-        <a className={styles.parental_rating}>
+        <a
+          className={styles.parental_rating}
+          href="http://www.rockstargames.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <picture>
             <img alt="parental rating" src="homepage/parental_rating.svg" />
           </picture>
@@ -63,7 +68,12 @@ const Footer = () => {
       </div>
 
       <div className={styles.rockstar_container}>
-        <a target="_blank" className={styles.rockstar_symbol}>
+        <a
+          className={styles.rockstar_symbol}
+          href="https://www.esrb.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <picture>
             <img src="icons/rockstar.svg" alt="rockstar icon" />
           </picture>
