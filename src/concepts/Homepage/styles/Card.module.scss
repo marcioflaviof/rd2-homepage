@@ -9,6 +9,8 @@
   flex-basis: 100%;
   padding: 0.625rem;
   transition: color 0.2s ease;
+  text-decoration: none;
+  color: colors.$white;
   &:hover {
     color: colors.$red-100;
     .image {

@@ -5,11 +5,12 @@ type CardType = {
   name: string;
   mask: string;
   image: string;
+  link: string;
 };
 
-const Card: React.FC<CardType> = ({ name, mask, image }) => {
+const Card: React.FC<CardType> = ({ name, mask, image, link }) => {
   return (
-    <a className={styles.container}>
+    <a href={link} className={styles.container}>
       <div className={styles.image_container}>
         <div className={styles.mask}>
           <Image

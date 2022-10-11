@@ -87,7 +87,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
 
           <div className={styles.divider}>
             <Image
-              src="/homepage/divider.png"
+              src="/rd2/homepage/divider_j0xytf.png"
               alt="divider"
               layout="responsive"
               height={1.5}

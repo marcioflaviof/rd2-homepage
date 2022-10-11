@@ -26,20 +26,22 @@ const Home: NextPage = () => {
         <div className={styles.bg_image_container_desktop}>
           <Image
             alt="banner image"
-            src="/homepage/main_banner.jpg"
+            src="/rd2/homepage/main_banner_caxhnr"
             layout="responsive"
             width="100"
             height="42"
+            loading="eager"
           />
         </div>
 
         <div className={styles.bg_image_container_mobile}>
           <Image
             alt="banner image"
-            src="/mobile/homepage/main_banner.jpg"
+            src="/rd2/mobile/homepage/main_banner_ujmyeo"
             layout="responsive"
             width="100"
-            height="138.53"
+            height="138"
+            loading="eager"
           />
         </div>
 
