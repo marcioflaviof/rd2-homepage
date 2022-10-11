@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slide_up {
+  z-index: 9999;
+  transition: 1s ease;
+  transform: translateY(-100vh);
+}
