@@ -31,16 +31,21 @@ type NavProps = {
 };
 
 const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
-  if (!show) return <></>;
-
   return (
-    <>
+    <div className={show ? "" : styles.hide_navbar}>
       <div
         className={styles.overlay}
         onClick={() => setShowNavbar((s) => !s)}
       />
       <nav className={styles.container}>
-        <div className={styles.background_img} />
+        <div className={styles.background_img}>
+          <Image
+            alt="nav background"
+            src="/rd2/mobile/homepage/nav_image_ogviqf"
+            layout="fill"
+            loading="eager"
+          />
+        </div>
         <div className={styles.bullets_container}>
           {navOptions.map((navOption) => {
             const justRender = navOption.subOptions ? (
@@ -103,7 +108,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
