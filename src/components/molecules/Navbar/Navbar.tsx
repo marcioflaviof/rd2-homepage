@@ -49,7 +49,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
         <div className={styles.bullets_container}>
           {navOptions.map((navOption) => {
             const justRender = navOption.subOptions ? (
-              <div>
+              <div key={navOption.option}>
                 <span className={styles.bullet_with_sub}>
                   {navOption.option}
                 </span>
@@ -71,6 +71,7 @@ const Navbar: React.FC<NavProps> = ({ show, setShowNavbar }) => {
               </div>
             ) : (
               <a
+                key={navOption.option}
                 className={`${styles.bullets} ${
                   navOption.selected && styles.selected
                 }`}
